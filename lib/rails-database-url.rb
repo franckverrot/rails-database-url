@@ -34,7 +34,7 @@ module RailsDatabaseUrl
     end
     URI::Generic.new(config["adapter"],
                      user_info,
-                     config["hostname"] || "localhost",
+                     config["host"] || config["hostname"] || "localhost",
                      config["port"],
                      nil,
                      "/#{config["database"]}",
